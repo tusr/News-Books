@@ -7,8 +7,10 @@ import com.google.android.material.tabs.TabLayoutMediator
 import com.tushar.newsapp.R
 import com.tushar.newsapp.databinding.ActivityHomeBinding
 import com.tushar.newsapp.view.adapter.NewsFragmentAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
 
+@AndroidEntryPoint
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
 
@@ -30,7 +32,7 @@ class HomeActivity : AppCompatActivity() {
 
         //Attaching tablayout with newsViewPager
         TabLayoutMediator(tabLayout, binding.newsPager) { tab, position ->
-            //Displaying tab texts 
+            //Displaying tab texts
             tab.text = newsTabTexts[position]
             binding.newsPager.setCurrentItem(tab.position, true)
         }.attach()

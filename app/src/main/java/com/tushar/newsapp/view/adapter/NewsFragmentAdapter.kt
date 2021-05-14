@@ -5,9 +5,11 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.tushar.newsapp.view.GoogleNewsFragment
 import com.tushar.newsapp.view.NewsOrgFragment
-
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 class NewsFragmentAdapter(fragmentActivity: FragmentActivity) :
     FragmentStateAdapter(fragmentActivity) {
+
     override fun getItemCount(): Int {
         return 2
     }
