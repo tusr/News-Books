@@ -6,7 +6,7 @@ import androidx.databinding.DataBindingUtil
 import com.google.android.material.tabs.TabLayoutMediator
 import com.tushar.newsapp.R
 import com.tushar.newsapp.databinding.ActivityHomeBinding
-import com.tushar.newsapp.view.adapter.NewsFragmentAdapter
+import com.tushar.newsapp.view.adapter.NewsFragmentStateAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -15,7 +15,7 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
 
     //Tab Texts
-    private val newsTabTexts = arrayOf("News Org", "Google News")
+    private val newsTabTexts = arrayOf("News Org", "Google Books")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -26,7 +26,7 @@ class HomeActivity : AppCompatActivity() {
 
     //Initializing views
     private fun initViews() {
-        val newsFragmentAdapter = NewsFragmentAdapter(this)
+        val newsFragmentAdapter = NewsFragmentStateAdapter(this)
         binding.newsPager.adapter = newsFragmentAdapter
         val tabLayout = binding.tabLayout
 
