@@ -5,7 +5,6 @@ import com.tushar.newsapp.network.NetworkConnectionInterceptor
 import com.tushar.newsapp.network.NewsApiService
 import com.tushar.newsapp.network.SafeApiRequest
 import com.tushar.newsapp.network.responses.gbooks.GoogleBooks
-import com.tushar.newsapp.network.responses.gbooks.Item
 import com.tushar.newsapp.network.responses.newsorg.Article
 import javax.inject.Inject
 

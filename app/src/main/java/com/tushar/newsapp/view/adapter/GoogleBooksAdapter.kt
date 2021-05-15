@@ -9,7 +9,6 @@ import com.tushar.newsapp.R
 import com.tushar.newsapp.network.responses.gbooks.Item
 import com.tushar.newsapp.view.listeners.BookClickListener
 import com.tushar.newsapp.view.viewholders.GoogleBooksViewHolder
-import kotlin.math.log
 
 
 class GoogleBooksAdapter : RecyclerView.Adapter<GoogleBooksViewHolder>() {

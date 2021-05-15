@@ -3,7 +3,6 @@ package com.tushar.newsapp.viewmodel
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.tushar.newsapp.network.responses.gbooks.GoogleBooks
 import com.tushar.newsapp.network.responses.gbooks.Item
 import com.tushar.newsapp.repository.Repository
 import com.tushar.newsapp.utils.ApiException

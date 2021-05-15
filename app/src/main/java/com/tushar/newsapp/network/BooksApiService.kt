@@ -2,7 +2,6 @@ package com.tushar.newsapp.network
 
 
 import com.tushar.newsapp.network.responses.gbooks.GoogleBooks
-import com.tushar.newsapp.network.responses.gbooks.Item
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Response

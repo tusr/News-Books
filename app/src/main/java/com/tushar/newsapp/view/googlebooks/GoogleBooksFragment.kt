@@ -15,7 +15,6 @@ import com.tushar.newsapp.R
 import com.tushar.newsapp.databinding.DialogBookBinding
 import com.tushar.newsapp.databinding.FragmentGoogleBooksBinding
 import com.tushar.newsapp.network.responses.gbooks.Item
-import com.tushar.newsapp.network.responses.newsorg.Article
 import com.tushar.newsapp.repository.Repository
 import com.tushar.newsapp.view.adapter.GoogleBooksAdapter
 import com.tushar.newsapp.view.listeners.BookClickListener

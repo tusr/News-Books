@@ -4,13 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.navigation.NavOptions
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -19,7 +16,6 @@ import com.tushar.newsapp.databinding.DialogNewsBinding
 import com.tushar.newsapp.databinding.FragmentNewsBinding
 import com.tushar.newsapp.network.responses.newsorg.Article
 import com.tushar.newsapp.repository.Repository
-import com.tushar.newsapp.utils.Utils
 import com.tushar.newsapp.view.adapter.NewsOrgListAdapter
 import com.tushar.newsapp.view.listeners.NetworkListener
 import com.tushar.newsapp.view.listeners.NewsOrgClickListener
@@ -74,7 +70,6 @@ class NewsOrgListFragment : Fragment(), NewsOrgClickListener, NetworkListener {
         binding.rvNews.itemAnimator = DefaultItemAnimator()
         binding.rvNews.adapter = newsAdapter
 
-
         //fetching Data
         newsViewModel.fetchHeadLineData()
         //setting Observer to data in viewModel
@@ -100,29 +95,9 @@ class NewsOrgListFragment : Fragment(), NewsOrgClickListener, NetworkListener {
 
     //Handling Card click event
     override fun cardClicked(newsArticle: Article) {
-//        var bundle = bundleOf(
-//            Utils.TITLE to newsarticle.title,
-//            Utils.DESCRIPTION to newsarticle.description,
-//            Utils.CONTENT to newsarticle.content,
-//            Utils.IMAGE_URL to newsarticle.urlToImage,
-//            Utils.NEWS_URL to newsarticle.url,
-//            Utils.SOURCE_NAME to newsarticle.source.name,
-//            Utils.AUTHOR_NAME to newsarticle.author, Utils.PUBLISHED_AT to newsarticle.publishedAt
-//        )
+
         displayDialog(newsArticle)
-//        bundle.putParcelable(Utils.NEWS_DETAIL, newsarticle)
-//        val navBuilder = NavOptions.Builder()
-//        navBuilder.setEnterAnim(R.anim.slide_in_right).setExitAnim(R.anim.slide_out_left)
-//            .setPopEnterAnim(R.anim.slide_in_left).setPopExitAnim(R.anim.slide_out_right)
-//
-//
-//        binding.apply {
-//            findNavController().navigate(
-//                R.id.action_newsOrgListFragment_to_newsDetailFragment,
-//                bundle,
-//                navBuilder.build()
-//            )
-//        }
+
 
     }
 
