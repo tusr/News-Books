@@ -1,11 +1,9 @@
 package com.tushar.newsapp.repository
 
 import com.google.android.gms.tasks.Task
-import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.tushar.newsapp.data.ViewData
-import javax.inject.Inject
 
 
 class FirebaseRepository() {

@@ -39,7 +39,8 @@ class NewsOrgListFragment : Fragment(), NewsOrgClickListener, NetworkListener {
     private lateinit var customAlertDialogView: View
     private val newsViewModel: NewsOrgViewModel by viewModels()
 
-    private lateinit var newsAdapter: NewsOrgListAdapter
+    @Inject
+    lateinit var newsAdapter: NewsOrgListAdapter
 
     @Inject
     lateinit var newsRepository: Repository
@@ -63,9 +64,9 @@ class NewsOrgListFragment : Fragment(), NewsOrgClickListener, NetworkListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        newsAdapter = NewsOrgListAdapter()
         binding.rvNews.layoutManager = LinearLayoutManager(requireContext())
-        materialAlertDialogBuilder = MaterialAlertDialogBuilder(requireContext(),R.style.CustomDialogAnimation)
+        materialAlertDialogBuilder =
+            MaterialAlertDialogBuilder(requireContext(), R.style.CustomDialogAnimation)
         //Setting item animator and adapter for recyclerview
         binding.rvNews.itemAnimator = DefaultItemAnimator()
         binding.rvNews.adapter = newsAdapter

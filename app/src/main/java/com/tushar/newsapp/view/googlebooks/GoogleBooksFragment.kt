@@ -40,7 +40,9 @@ class GoogleBooksFragment : Fragment(), BookClickListener {
     private var param2: String? = null
     private lateinit var binding: FragmentGoogleBooksBinding
     private val booksViewModel: GoogleBooksViewModel by viewModels()
-    private lateinit var booksAdapter: GoogleBooksAdapter
+
+    @Inject
+    lateinit var booksAdapter: GoogleBooksAdapter
     private lateinit var materialAlertDialogBuilder: MaterialAlertDialogBuilder
     private lateinit var customAlertDialogView: View
     private lateinit var bookBinding: DialogBookBinding
@@ -67,10 +69,8 @@ class GoogleBooksFragment : Fragment(), BookClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        booksAdapter = GoogleBooksAdapter()
-
         materialAlertDialogBuilder =
-            MaterialAlertDialogBuilder(requireContext(), R.style.CustomDialogAnimation)
+            MaterialAlertDialogBuilder(requireContext())
 
         //Setting item animator and adapter for recyclerview
         binding.rvBooks.itemAnimator = DefaultItemAnimator()
