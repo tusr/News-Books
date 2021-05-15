@@ -14,6 +14,7 @@ class Utils {
         val PUBLISHED_AT = "published_at"
         val TITLE = "title"
 
+
         fun getFormattedDate(s: String): String {
             val parser = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
             val formatter = SimpleDateFormat("dd.MM.yyyy")

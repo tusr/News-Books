@@ -2,6 +2,7 @@ package com.tushar.newsapp.di
 
 import android.content.Context
 import com.tushar.newsapp.network.NetworkConnectionInterceptor
+import com.tushar.newsapp.repository.FirebaseRepository
 
 
 import dagger.Module
@@ -18,5 +19,7 @@ class AppModule {
     fun provideNetworkInterceptor(@ApplicationContext context: Context) =
         NetworkConnectionInterceptor(context)
 
+    @Provides
+    fun provideFirebaseRepository() = FirebaseRepository()
 
 }
